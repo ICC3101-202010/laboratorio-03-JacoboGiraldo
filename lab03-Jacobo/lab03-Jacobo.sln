@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab03-Jacobo", "lab03-Jacobo.csproj", "{87F55EFC-FD00-4AFB-AFBB-D716C0A6E299}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|anycpu = Debug|anycpu
+		Release|anycpu = Release|anycpu
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87F55EFC-FD00-4AFB-AFBB-D716C0A6E299}.Debug|anycpu.ActiveCfg = Debug|anycpu
+		{87F55EFC-FD00-4AFB-AFBB-D716C0A6E299}.Debug|anycpu.Build.0 = Debug|anycpu
+		{87F55EFC-FD00-4AFB-AFBB-D716C0A6E299}.Release|anycpu.ActiveCfg = Release|anycpu
+		{87F55EFC-FD00-4AFB-AFBB-D716C0A6E299}.Release|anycpu.Build.0 = Release|anycpu
+	EndGlobalSection
+EndGlobal
