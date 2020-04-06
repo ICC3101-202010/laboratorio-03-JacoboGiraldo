@@ -5,10 +5,10 @@ namespace lab03Jacobo
 {
     public class Productos
     {
-        private string Nombre_Producto;
-        private int Precio;
-        private string Marca;
-        private int Stock;
+        protected string Nombre_Producto { get; set; }
+        protected int Precio { get; set; }
+        protected string Marca { get; set; }
+        protected int Stock { get; set; }
 
         public Productos()
         {

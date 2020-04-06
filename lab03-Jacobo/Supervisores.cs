@@ -5,9 +5,12 @@ namespace lab03Jacobo
 {
     public class Supervisores:Empleados
     {
-        public Supervisores(int ID_S)
+        public Supervisores(string Nombre, int Nivel_Cargo, int Sueldo, string Horario_Trabajo)
         {
-            this.ID_Empleado = ID_S;
+            this.Nombre = Nombre;
+            this.Nivel_Cargo = Nivel_Cargo;
+            this.Sueldo = Sueldo;
+            this.Horario_Trabajo = Horario_Trabajo;
         }
     }
 }
