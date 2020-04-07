@@ -33,7 +33,10 @@ namespace lab03Jacobo
         {
             return Precio;
         }
-        
+        public int SacarStock()
+        {
+            return Stock;
+        }
         
 
       
