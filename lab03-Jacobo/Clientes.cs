@@ -5,7 +5,7 @@ namespace lab03Jacobo
 {
     public class Cliente:Persona
     {
-
+        protected List<string> MetodosDePago = new List<string>() {"Efectivo","Tarjeta de Credito","Tarjeta de Debito","Chequera","Transferencia Bancaria"};
 
         public Cliente(string Nombre, string Apellido, string RUT)
         {
@@ -14,10 +14,19 @@ namespace lab03Jacobo
             this.RUT = RUT;
         }
 
-
-        public void Compra_Productos()
+        public string MetodoPago()
         {
-
+            Random X = new Random();
+            return MetodosDePago[X.Next(0, 4)];
         }
+        public string NombreCliente()
+        {
+            return Nombre;
+        }
+
+
+
+
+
     }
 }

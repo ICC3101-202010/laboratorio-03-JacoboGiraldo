@@ -12,5 +12,21 @@ namespace lab03Jacobo
             this.Sueldo = Sueldo;
             this.Horario_Trabajo = Horario_Trabajo;
         }
+        public void AgregarSupervisores(Supervisores SupervisorCualquiera)
+        {
+            SupervisoresTotal.Add(SupervisorCualquiera);
+        }
+        public void MostrarSupervisores()
+        {
+            for (int Z = 0; Z < SupervisoresTotal.Count; Z++)
+            {
+                Console.WriteLine(SupervisoresTotal[Z].InfoBasica());
+            }
+        }
+
+
+
+
+
     }
 }

@@ -9,21 +9,29 @@ namespace lab03Jacobo
         protected int Sueldo { get; set; }
         protected string Horario_Trabajo { get; set; }
 
+        protected List<Jefes> JefesTotal = new List<Jefes>();
+        protected List<Supervisores> SupervisoresTotal = new List<Supervisores>();
+        protected List<Cajeros> CajerosTotal = new List<Cajeros>();
+        protected List<Auxiliares> AuxiliaresTotal = new List<Auxiliares>();
+        
         public Empleados()
         {
          
-
         }
-        List<string> empleados = new List<string>();
-        public void Info_Empleados()
+
+        List<Empleados> EmpleadosTotal = new List<Empleados>();
+        public void AgregarEmpleados(Empleados EmpleadoX)
         {
-            empleados.Add(Nombre);
-            empleados.Add(RUT);
-            empleados.Add(Nivel_Cargo.ToString());
-            empleados.Add(Sueldo.ToString());
-            empleados.Add(Horario_Trabajo);
+            EmpleadosTotal.Add(EmpleadoX);
 
         }
+        public string InfoBasica()
+        {
+            string Info = "Nombre: " + Nombre + ", RUT: " + RUT + ", Sueldo: " + Sueldo.ToString() + ", Horario Trabajo: " + Horario_Trabajo + "\n";
+            return Info;
+        }
+
+
 
 
         public bool Ascenso(int Nivel_Cargo)

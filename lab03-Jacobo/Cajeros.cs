@@ -12,5 +12,27 @@ namespace lab03Jacobo
             this.Sueldo = Sueldo;
             this.Horario_Trabajo = Horario_Trabajo;
         }
+        public void AgregarCajeros(Cajeros CajeroCualquiera)
+        {
+            CajerosTotal.Add(CajeroCualquiera);
+        }
+        public void MostrarCajeros()
+        {
+            for (int Z = 0; Z < CajerosTotal.Count; Z++)
+            {
+                Console.WriteLine(CajerosTotal[Z].InfoBasica());
+            }
+        }
+        public string NombreCajero()
+        {
+            return Nombre;
+        }
+
+
+
+
+
+
+
     }
 }
