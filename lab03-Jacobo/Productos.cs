@@ -12,6 +12,8 @@ namespace lab03Jacobo
 
         protected List<Productos> ProductosTotal = new List<Productos>();
         protected List<string> Boletas = new List<string>();
+        protected List<int> ActualizacionStock = new List<int>();
+        protected List<string> ActualizacionProducto = new List<string>();
 
         public Productos(string Nombre_Producto, int Precio, string Marca, int Stock)
         {
@@ -33,11 +35,31 @@ namespace lab03Jacobo
         {
             return Precio;
         }
-        public int SacarStock()
+        public string SacarStock()
         {
-            return Stock;
+            return Stock.ToString();
         }
+        public string SacarNombre()
+        {
+            return Nombre_Producto;
+        }
+        public string SacarMarca()
+        {
+            return Marca;
+        }
+
+      
         
+        public List<string> MostrarTodoActualizado(List<Productos> Productos, List<int> ActualStock)
+        {
+            for (int i = 0;i<Productos.Count;i++)
+            {
+                string Inf = Productos[i].SacarNombre() + "-" + Productos[i].SacarMarca() + "- Stock: " + ActualStock[i].ToString();
+                ActualizacionProducto.Add(Inf);
+            }
+            
+            return ActualizacionProducto;
+        }
 
       
     }

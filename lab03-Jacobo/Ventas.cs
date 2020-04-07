@@ -8,7 +8,7 @@ namespace lab03Jacobo
         {
         }
         protected string InfoBoleta;
-        public string Venta_Producto(Clientes ClienteX, Cajeros CajeroX, List<Productos> Productos, int CantidadProductos)
+        public string Venta_Producto(Clientes ClienteX, Cajeros CajeroX, List<Productos> Productos, int CantidadProductos, List<string> ActualSTOCK)
         {
             //Registrar todo de la compra (Nombre Cliente, Nombre Cajero, Lista Productos, Fecha y Hora)
             int TotalPrecio = 0;
@@ -20,8 +20,14 @@ namespace lab03Jacobo
             {
                 Random random = new Random();
                 int X = random.Next(0, Productos.Count);
+                if (ActualSTOCK[X] == "0")
+                {
+                    InfoBoleta += "No se puedo realizar la compra porque no hay stock suficiente del producto: " + Productos[X].SacarNombre();
+                    return InfoBoleta;
+                }
                 InfoBoleta += Productos[X].PYPYM() + "\n";
-                
+                int Stock = Int32.Parse(ActualSTOCK[X]) - 1;
+                ActualSTOCK[X] = Stock.ToString();
 
             }
             for (int Cont2 = 0; Cont2 < Productos.Count; Cont2++)
