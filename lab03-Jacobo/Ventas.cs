@@ -28,12 +28,9 @@ namespace lab03Jacobo
                 InfoBoleta += Productos[X].PYPYM() + "\n";
                 int Stock = Int32.Parse(ActualSTOCK[X]) - 1;
                 ActualSTOCK[X] = Stock.ToString();
-
+                TotalPrecio += Productos[X].SacarPrecio();
             }
-            for (int Cont2 = 0; Cont2 < Productos.Count; Cont2++)
-            {
-                TotalPrecio += Productos[Cont2].SacarPrecio();
-            }
+           
             InfoBoleta += "Total a Pagar: $" + TotalPrecio.ToString() + "\n";
             InfoBoleta += "Paga con: "+ClienteX.MetodoPago()+"\n" ;
             InfoBoleta += "-----------------------------------------" + "\n";

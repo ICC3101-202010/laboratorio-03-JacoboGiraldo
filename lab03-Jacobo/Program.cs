@@ -216,7 +216,7 @@ namespace lab03Jacobo
                         
                     }
                     //Empleados
-                    for (int Cont = 0; Cont < 1; Cont++) ;
+                    for (int Cont = 0; Cont < 1; Cont++) 
                     {
                         //JEFES
                         int V = random.Next(0, NombresSim.Count);
@@ -231,7 +231,7 @@ namespace lab03Jacobo
                         GuardaJefesSIM.Add(JefeX);
                         EmpleadosSIM.Add(JefeX);
                     }
-                    for (int Cont = 0; Cont < 1; Cont++) ;
+                    for (int Cont = 0; Cont < 1; Cont++) 
                     {
                         //SUPERVISORES
                         int V = random.Next(0, NombresSim.Count);
@@ -246,7 +246,7 @@ namespace lab03Jacobo
                         GuardaSupervisoresSIM.Add(SupervisorX);
                         EmpleadosSIM.Add(SupervisorX);
                     }
-                    for (int Cont = 0; Cont < 3; Cont++) ;
+                    for (int Cont = 0; Cont < 3; Cont++)
                     {
                         //CAJEROS
                         int V = random.Next(0, NombresSim.Count);
@@ -261,7 +261,7 @@ namespace lab03Jacobo
                         GuardaCajerosSIM.Add(CajeroX);
                         EmpleadosSIM.Add(CajeroX);
                     }
-                    for (int Cont = 0; Cont < 2; Cont++) ;
+                    for (int Cont = 0; Cont < 2; Cont++) 
                     {
                         //AUXILIARES
                         int V = random.Next(0, NombresSim.Count);
@@ -282,7 +282,7 @@ namespace lab03Jacobo
                         int A = random.Next(0, NombreProSim.Count);
                         int Precio = random.Next(1000, 5000);
                         int B = random.Next(0, MarcasSim.Count);
-                        int Stock = random.Next(3, 5);
+                        int Stock = random.Next(1, 5);
 
                         Productos ProductoX = new Productos(NombreProSim[A],Precio,MarcasSim[B],Stock);
                         GuardaProductoSIM.Add(ProductoX);
@@ -307,15 +307,26 @@ namespace lab03Jacobo
                     }
                     // Generar Venta
                     Ventas ventasSIM = new Ventas();
-                    for (int i = 0;i<5;i++ )
+                    for (int i = 0;i < 5;i++ )
                     {
                         int NCliente = random.Next(0, 14);
                         int NCajero = random.Next(0, 2);
                         int NProducto = random.Next(1, 5);
-                        var BoletaSIM = ventasSIM.Venta_Producto(GuardaClientesSIM[NCliente], GuardaCajerosSIM[NCajero], GuardaProductoSIM, NProducto, ActualizacionStockSIM);
+                        string BoletaSIM = ventasSIM.Venta_Producto(GuardaClientesSIM[NCliente], GuardaCajerosSIM[NCajero], GuardaProductoSIM, NProducto, ActualizacionStockSIM);
                         GuardaBoletasSIM.Add(BoletaSIM);
                     }
                     ventasSIM.InfoBoletas(GuardaBoletasSIM);
+
+                    //Ver Stock de productos Actualizado
+                    Console.WriteLine("El nuevo stock despues de las compras es: ");
+                    for (int i = 0; i < GuardaProductoSIM.Count; i++)
+                    {
+                        string Inf = GuardaProductoSIM[i].SacarNombre() + "-" + GuardaProductoSIM[i].SacarMarca() + "- Stock: " + ActualizacionStockSIM[i]+"\n";
+                        Console.WriteLine(Inf);
+                    }
+
+                    
+
 
 
                 }
