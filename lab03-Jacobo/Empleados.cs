@@ -37,10 +37,10 @@ namespace lab03Jacobo
                 Console.WriteLine(EmpleadosTotal[Z].InfoBasica());
             }
         }
-
-
-
-
+        public string NombreCajero()
+        {
+            return Nombre;
+        }
         public bool Ascenso(int Nivel_Cargo)
         {
             this.Nivel_Cargo = Nivel_Cargo;

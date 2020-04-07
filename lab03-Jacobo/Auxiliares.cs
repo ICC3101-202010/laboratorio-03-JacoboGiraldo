@@ -17,17 +17,8 @@ namespace lab03Jacobo
             this.Fecha_Nacimiento = Fecha_Nacimiento;
             this.Nacionalidad = Nacionalidad;
         }
-        public void AgregarAuxiliares(Auxiliares AuxiliareCualquiera)
-        {
-            AuxiliaresTotal.Add(AuxiliareCualquiera);
-        }
-        public void MostrarAuxiliares()
-        {
-            for (int Z = 0; Z<AuxiliaresTotal.Count;Z++)
-            {
-                Console.WriteLine(AuxiliaresTotal[Z].InfoBasica());
-            }
-        }
+  
+  
 
 
 

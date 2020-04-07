@@ -33,35 +33,9 @@ namespace lab03Jacobo
         {
             return Precio;
         }
-        protected string InfoBoleta;
-        public void Venta_Producto(Cliente ClienteX, Cajeros CajeroX, List<Productos> Productos)
-        {
-            //Registrar todo de la compra (Nombre Cliente, Nombre Cajero, Lista Productos, Fecha y Hora)
-            int TotalPrecio = 0;
-            InfoBoleta += "Fecha de la compra: " + DateTime.Now;
-            InfoBoleta += "Cliente: " + ClienteX.NombreCliente() +"\n";
-            InfoBoleta += "Atendido por el Cajero: " + CajeroX.NombreCajero() + "\n";
-            
-            for (int Cont1 = 0; Cont1<Productos.Count;Cont1++)
-            {
-                InfoBoleta += Productos[Cont1].PYPYM() +"\n";
+        
+        
 
-            }
-            for (int Cont2 = 0;Cont2<Productos.Count;Cont2++)
-            {
-                TotalPrecio += Productos[Cont2].SacarPrecio();
-            }
-            InfoBoleta += "Total a Pagar: $" + TotalPrecio.ToString()+"\n";
-            InfoBoleta += ClienteX.MetodoPago();
-            InfoBoleta += "-----------------------------------------" + "\n";
-
-        }
-
-        public string InfoBoletas()
-        {
-            return InfoBoleta;
-        }
-
-
+      
     }
 }

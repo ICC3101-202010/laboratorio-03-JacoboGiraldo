@@ -17,18 +17,8 @@ namespace lab03Jacobo
             this.Fecha_Nacimiento = Fecha_Nacimiento;
             this.Nacionalidad = Nacionalidad;
         }
-        public void AgregarJefes(Jefes JefeCualquiera)
-        {
-            JefesTotal.Add(JefeCualquiera);
-        }
-        public void MostrarJefes()
-        {
-            for (int Z = 0; Z < JefesTotal.Count; Z++)
-            {
-                Console.WriteLine(JefesTotal[Z].InfoBasica());
-            }
-        }
-      
+        
+ 
 
         
         

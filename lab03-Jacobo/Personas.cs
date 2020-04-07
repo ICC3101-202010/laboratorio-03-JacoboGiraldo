@@ -12,8 +12,25 @@ namespace lab03Jacobo
         protected string Nacionalidad { get; set; }
 
 
-   
+        
 
+        public string NombreCliente()
+        {
+            return Nombre;
+        }
+        public string InfoCliente()
+        {
+            string Info = "Nombre: " + Nombre + ", Apellido: " + Apellido + ", RUT: " + RUT + "\n";
+            return Info;
+        }
 
+        List<Persona> ClientesTotal = new List<Persona>();
+        public void MostrarClientes()
+        {
+            for (int Z = 0; Z < ClientesTotal.Count; Z++)
+            {
+                Console.WriteLine(ClientesTotal[Z].InfoCliente());
+            }
+        }
     }
 }
