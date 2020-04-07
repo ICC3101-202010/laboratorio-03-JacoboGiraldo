@@ -38,13 +38,13 @@ namespace lab03Jacobo
         }
         public void InfoBoletas(List<string> IB)
         {
-            string InfoBoletasTotal = "";
+            
             foreach(string ELEMENT in IB)
             {
-                InfoBoletasTotal += ELEMENT;
-                
+                Console.WriteLine(ELEMENT);
+
             }
-            Console.WriteLine(InfoBoletasTotal);
+            
             
         }
 

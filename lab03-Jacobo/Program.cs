@@ -307,7 +307,7 @@ namespace lab03Jacobo
                     }
                     // Generar Venta
                     Ventas ventasSIM = new Ventas();
-                    for (int i = 0;i < 5;i++ )
+                    for (int i = 0;i < 5;i+=1 )
                     {
                         int NCliente = random.Next(0, 14);
                         int NCajero = random.Next(0, 2);
