@@ -3,14 +3,19 @@ using System.Collections.Generic;
 
 namespace lab03Jacobo
 {
-    public class Auxiliares:Empleados
+    public class Auxiliares : Empleados
     {
-        public Auxiliares(string Nombre, int Nivel_Cargo, int Sueldo, string Horario_Trabajo)
+        protected int NivelAuxiliares = 4;
+
+        public Auxiliares(string Nombre, string Apellido, string RUT, int Sueldo, string Horario_Trabajo, string Fecha_Nacimiento, string Nacionalidad)
         {
             this.Nombre = Nombre;
-            this.Nivel_Cargo = Nivel_Cargo;
+            this.Apellido = Apellido;
+            this.RUT = RUT;
             this.Sueldo = Sueldo;
             this.Horario_Trabajo = Horario_Trabajo;
+            this.Fecha_Nacimiento = Fecha_Nacimiento;
+            this.Nacionalidad = Nacionalidad;
         }
         public void AgregarAuxiliares(Auxiliares AuxiliareCualquiera)
         {

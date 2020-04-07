@@ -7,11 +7,13 @@ namespace lab03Jacobo
     {
         protected List<string> MetodosDePago = new List<string>() {"Efectivo","Tarjeta de Credito","Tarjeta de Debito","Chequera","Transferencia Bancaria"};
 
-        public Cliente(string Nombre, string Apellido, string RUT)
+        public Cliente(string Nombre, string Apellido, string RUT, string Fecha_Nacimiento, string Nacionalidad)
         {
             this.Nombre = Nombre;
             this.Apellido = Apellido;
             this.RUT = RUT;
+            this.Fecha_Nacimiento = Fecha_Nacimiento;
+            this.Nacionalidad = Nacionalidad;
         }
 
         public string MetodoPago()

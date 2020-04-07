@@ -12,12 +12,7 @@ namespace lab03Jacobo
         protected string Nacionalidad { get; set; }
 
 
-        public string[] infoPersonas()
-        {
-            string[] InfoPersonas = new string[5] {RUT,Nombre,Apellido,Fecha_Nacimiento,Nacionalidad};
-            return InfoPersonas;
-        }
-
+   
 
 
     }

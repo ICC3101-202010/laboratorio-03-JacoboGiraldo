@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace lab03Jacobo
 {
-    public abstract class Empleados:Persona
+    public class Empleados:Persona
     { 
         protected int Nivel_Cargo { get; set; }
         protected int Sueldo { get; set; }
@@ -29,6 +29,13 @@ namespace lab03Jacobo
         {
             string Info = "Nombre: " + Nombre + ", RUT: " + RUT + ", Sueldo: " + Sueldo.ToString() + ", Horario Trabajo: " + Horario_Trabajo + "\n";
             return Info;
+        }
+        public void MostrarEmpleados()
+        {
+            for (int Z = 0; Z < EmpleadosTotal.Count; Z++)
+            {
+                Console.WriteLine(EmpleadosTotal[Z].InfoBasica());
+            }
         }
 
 
