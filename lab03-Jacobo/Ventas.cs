@@ -19,7 +19,7 @@ namespace lab03Jacobo
             for (int Cont1 = 0; Cont1 < CantidadProductos; Cont1++)
             {
                 Random random = new Random();
-                int X = random.Next(0, Productos.Count);
+                int X = random.Next(0, Productos.Count - 1);
                 if (ActualSTOCK[X] == "0")
                 {
                     InfoBoleta += "No se puedo realizar la compra porque no hay stock suficiente del producto: " + Productos[X].SacarNombre();

@@ -23,7 +23,11 @@ namespace lab03Jacobo
             string Info = "Nombre: " + Nombre + ", Apellido: " + Apellido + ", RUT: " + RUT + "\n";
             return Info;
         }
-
+        public string InfoClienteTotal()
+        {
+            string Info = "Nombre: " + Nombre + ", Apellido: "+Apellido+", RUT: " + RUT  + ", Fecha Nacimiento: " + Fecha_Nacimiento + ", Nacionalidad: " + Nacionalidad + "\n";
+            return Info;
+        }
         List<Persona> ClientesTotal = new List<Persona>();
         public void MostrarClientes()
         {
@@ -32,5 +36,6 @@ namespace lab03Jacobo
                 Console.WriteLine(ClientesTotal[Z].InfoCliente());
             }
         }
+        
     }
 }

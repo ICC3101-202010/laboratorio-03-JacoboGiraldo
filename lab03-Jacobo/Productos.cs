@@ -50,16 +50,7 @@ namespace lab03Jacobo
 
       
         
-        public List<string> MostrarTodoActualizado(List<Productos> Productos, List<int> ActualStock)
-        {
-            for (int i = 0;i<Productos.Count;i++)
-            {
-                string Inf = Productos[i].SacarNombre() + "-" + Productos[i].SacarMarca() + "- Stock: " + ActualStock[i].ToString();
-                ActualizacionProducto.Add(Inf);
-            }
-            
-            return ActualizacionProducto;
-        }
+       
 
       
     }

@@ -29,14 +29,15 @@ namespace lab03Jacobo
         {
             string Info = "Nombre: " + Nombre + ", RUT: " + RUT + ", Sueldo: " + Sueldo.ToString() + ", Horario Trabajo: " + Horario_Trabajo + "\n";
             return Info;
+
         }
-        public void MostrarEmpleados()
+        public string InfoTotal()
         {
-            for (int Z = 0; Z < EmpleadosTotal.Count; Z++)
-            {
-                Console.WriteLine(EmpleadosTotal[Z].InfoBasica());
-            }
+            string Info = "Nombre: " + Nombre + ", Apellido: " + Apellido + ", RUT: " + RUT + ", Sueldo: " + Sueldo.ToString() + ", Horario Trabajo: " + Horario_Trabajo+", Fecha Nacimiento: "+Fecha_Nacimiento+", Nacionalidad: "+Nacionalidad+"\n";
+            return Info;
         }
+      
+
         public string NombreCajero()
         {
             return Nombre;

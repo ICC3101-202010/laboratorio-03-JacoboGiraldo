@@ -62,6 +62,8 @@ namespace lab03Jacobo
             List<Auxiliares> GuardaAuxiliaresSIM = new List<Auxiliares>();
             List<Productos> GuardaProductoSIM = new List<Productos>();
             List<string> ActualizacionStockSIM = new List<string>();
+            List<string> GuardaBoletasSIM = new List<string>();
+
             while (true)
             {
 
@@ -280,13 +282,40 @@ namespace lab03Jacobo
                         int A = random.Next(0, NombreProSim.Count);
                         int Precio = random.Next(1000, 5000);
                         int B = random.Next(0, MarcasSim.Count);
-                        int Stock = random.Next(0, 5);
+                        int Stock = random.Next(3, 5);
 
                         Productos ProductoX = new Productos(NombreProSim[A],Precio,MarcasSim[B],Stock);
                         GuardaProductoSIM.Add(ProductoX);
+                        ActualizacionStockSIM.Add(ProductoX.SacarStock());
                     }
-
-
+                    Console.WriteLine("Los clientes de esta simulacion son: \n");
+                    for (int Cont = 0; Cont<GuardaClientesSIM.Count;Cont++)
+                    {
+                        Console.WriteLine(GuardaClientesSIM[Cont].InfoClienteTotal());
+                    }
+                    Console.WriteLine("Los empleados de esta simulacion son los siguientes: \n");
+                    Console.WriteLine("En orden (1 Jefe, 1 Supervisor, 3 Cajeros, 2 Auxiliares) \n");
+                    for (int Cont = 0;Cont<EmpleadosSIM.Count;Cont++)
+                    {
+                        Console.WriteLine(EmpleadosSIM[Cont].InfoTotal());
+                    }
+                    Console.WriteLine("Los Productos de esta simulacion son los siguientes: ");
+                    for (int i = 0; i < GuardaProductoSIM.Count; i++)
+                    {
+                        string Inf = GuardaProductoSIM[i].SacarNombre() + "-" + GuardaProductoSIM[i].SacarMarca() + "- Stock: " + ActualizacionStockSIM[i]+"\n";
+                        Console.WriteLine(Inf);
+                    }
+                    // Generar Venta
+                    Ventas ventasSIM = new Ventas();
+                    for (int i = 0;i<5;i++ )
+                    {
+                        int NCliente = random.Next(0, 14);
+                        int NCajero = random.Next(0, 2);
+                        int NProducto = random.Next(1, 5);
+                        var BoletaSIM = ventasSIM.Venta_Producto(GuardaClientesSIM[NCliente], GuardaCajerosSIM[NCajero], GuardaProductoSIM, NProducto, ActualizacionStockSIM);
+                        GuardaBoletasSIM.Add(BoletaSIM);
+                    }
+                    ventasSIM.InfoBoletas(GuardaBoletasSIM);
 
 
                 }
